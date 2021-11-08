@@ -20,7 +20,7 @@ const Wrapper = styled(Responsive)`
   align-items: center;
   color: gray;
   width: 100%;
-  margin-left:0;
+  margin-left: 0;
   justify-content: space-between; /* 자식 엘리먼트 사이에 여백을 최대로 설정 */
   .logo {
     font-size: 1.125rem;
@@ -28,7 +28,7 @@ const Wrapper = styled(Responsive)`
     letter-spacing: 2px;
   }
   .right {
-    margin-right:0;
+    margin-right: 0;
     display: flex;
     align-items: center;
   }
@@ -46,21 +46,23 @@ const Menu = styled.div`
 `;
 
 const Header = () => {
-    return (
-        <>       
-        <HeaderBlock>
-            <Wrapper>
-              <Link to="/" className="logo" >
-                WE_CAN_DO
-              </Link>
+  return (
+    <>
+      <HeaderBlock>
+        <Wrapper>
+          <Link to="/" className="logo">
+            WE_CAN_DO
+          </Link>
+          <Link to="/upload">
             <div className="right">
-                <Menu>menu</Menu>
+              <Menu>글쓰기</Menu>
             </div>
-             </Wrapper>
-          </HeaderBlock>
-          <Spacer />
-      </>
-      );
-    };
-    
-    export default Header;
+          </Link>
+        </Wrapper>
+      </HeaderBlock>
+      <Spacer />
+    </>
+  );
+};
+
+export default Header;
